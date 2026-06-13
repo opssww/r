@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الرياضيات</title>
+    <meta name="description" content="موقع بسيط لاختبار نفسك في أسئلة الرياضيات">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>تحدي الرياضيات</h1>
+            <p>اختبر مهاراتك بناءً على الأسئلة المستخرجة من المذكرة</p>
+        </header>
+
+        <main id="quiz-container" class="glass-panel">
+            <div id="start-screen" class="screen active">
+                <h2>مستعد للاختبار؟</h2>
+                <p id="start-desc">يحتوي الاختبار على جميع أسئلة المذكرة. اختر الإجابة الصحيحة لكل سؤال.</p>
+                <button id="start-btn" class="primary-btn">ابدأ الاختبار</button>
+            </div>
+
+            <div id="question-screen" class="screen">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="question-header">
+                    <span id="question-counter" class="counter">السؤال 1 / --</span>
+                    <span id="score-counter" class="counter">النقاط: 0</span>
+                </div>
+                
+                <div class="question-image-container">
+                    <img id="question-image" src="" alt="Question" />
+                </div>
+                
+                <div id="options-container" class="options-row">
+                    <!-- Options will be injected here via JS -->
+                </div>
+
+                <div class="action-container">
+                    <button id="prev-btn" class="secondary-btn hidden">السؤال السابق</button>
+                    <button id="next-btn" class="primary-btn hidden">السؤال التالي</button>
+                </div>
+            </div>
+
+            <div id="result-screen" class="screen">
+                <h2>النتيجة النهائية</h2>
+                <div class="score-circle">
+                    <span id="final-score">0</span>
+                    <span class="total" id="final-total">/ --</span>
+                </div>
+                <p id="result-message"></p>
+                
+                <div class="result-actions">
+                    <button id="review-btn" class="secondary-btn">مراجعة الأخطاء</button>
+                    <button id="restart-btn" class="primary-btn">إعادة الاختبار</button>
+                </div>
+
+                <div id="review-container" class="review-container hidden">
+                    <h3>مراجعة الإجابات</h3>
+                    <div id="review-list"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="quiz_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
